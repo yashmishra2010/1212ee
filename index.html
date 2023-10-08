@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Blockchain Website</title>
+</head>
+<body>
+    <h1>Blockchain Data</h1>
+  
+        <tr>
+            <th>Index</th>
+            <th>Timestamp</th>
+            <th>Data</th>
+            <th>Previous Hash</th>
+            <th>Hash</th>
+        </tr>
+        {% for block in blockchain %}
+            <tr>
+                <td>{{ block.index }}</td>
+                <td>{{ block.timestamp }}</td>
+                <td>{{ block.data }}</td>
+                <td>{{ block.previous_hash }}</td>
+                <td>{{ block.hash }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
